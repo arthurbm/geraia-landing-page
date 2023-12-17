@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-export default function Component() {
+export default function Home() {
   return (
     <main className="w-full">
       <section className="relative w-full bg-[#ffffff]">
