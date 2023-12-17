@@ -1,22 +1,30 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from "next";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
-  title: 'Geraia',
-  description: 'Grupo de pesquisa em IA generativa',
-}
+  title: "Geraia",
+  description: "Grupo de pesquisa em IA generativa",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={GeistSans.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
-  )
+  );
 }

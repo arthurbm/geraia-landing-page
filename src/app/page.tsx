@@ -6,39 +6,47 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import {
+  CalendarIcon,
+  CopyrightIcon,
+  ProjectorIcon,
+  SearchIcon,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <main className="w-full">
-      <section className="relative w-full bg-[#ffffff]">
-        <nav className="container mx-auto px-4 py-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold tracking-tighter">GERAIA</h1>
-            <div className="hidden space-x-4 lg:flex">
-              <Button className="text-base text-black" variant="link">
-                Início
-              </Button>
-              <Button className="text-base text-black" variant="link">
-                Sobre
-              </Button>
-              <Button className="text-base text-black" variant="link">
-                Pesquisa
-              </Button>
-              <Button className="text-base text-black" variant="link">
-                Equipe
-              </Button>
-              <Button className="text-base text-black" variant="link">
-                Contato
-              </Button>
-            </div>
+      <nav className="fixed top-0 z-10 mx-auto w-full px-4 py-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold tracking-tighter">GERAIA</h1>
+          <div className="hidden space-x-4 lg:flex">
+            <Button className="text-base text-current" variant="link">
+              Início
+            </Button>
+            <Button className="text-base text-current" variant="link">
+              Sobre
+            </Button>
+            <Button className="text-base text-current" variant="link">
+              Pesquisa
+            </Button>
+            <Button className="text-base text-current" variant="link">
+              Equipe
+            </Button>
+            <Button className="text-base text-current" variant="link">
+              Contato
+            </Button>
+            <ThemeToggle />
           </div>
-        </nav>
-        <div className="container mx-auto px-4 py-12 md:px-6 md:py-24 lg:px-8 lg:py-32">
-          <h1 className="mb-10 text-center text-4xl font-bold tracking-tighter">
-            Bem-vindo ao Grupo de Pesquisa GERAIA
+        </div>
+      </nav>
+      <section className="relative h-screen w-full">
+        <div className="container mx-auto flex h-full flex-col justify-center px-4 py-12 md:px-6 md:py-24 lg:px-8 lg:py-32">
+          <h1 className="mb-10 text-center text-6xl font-bold tracking-tighter">
+            GERAIA
           </h1>
           <p className="mb-10 text-center text-lg text-gray-600">
-            Dedicado ao avanço da pesquisa em IA Generativa
+            Pesquisa e desenvolvimento em IA Generativa
           </p>
           <div className="flex justify-center">
             <Button className="mr-4" variant="link">
@@ -51,43 +59,70 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
         <section className="mb-10">
           <h2 className="mb-4 text-3xl font-bold tracking-tighter">
-            Áreas de Pesquisa
+            Áreas de atuação
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <h3 className="text-xl font-semibold">Modelos Generativos</h3>
+                <h3 className="flex items-center gap-2 text-xl font-semibold">
+                  <div className="rounded-full bg-primary p-2">
+                    <SearchIcon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Pesquisa
+                </h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-base text-gray-500">
-                  Nosso grupo está focado no desenvolvimento de novos modelos
-                  generativos para várias aplicações.
+              <CardContent className="pt-2">
+                <p className="text-base">
+                  Nosso grupo está focado no desenvolvimento de novas pesquisas
+                  para várias aplicações.
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <h3 className="text-xl font-semibold">
-                  Aprendizado por Reforço
+                <h3 className="flex items-center gap-2 text-xl font-semibold">
+                  <div className="rounded-full bg-primary p-2">
+                    <ProjectorIcon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Projetos
                 </h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-base text-gray-500">
-                  Estamos explorando como o aprendizado por reforço pode ser
-                  usado na IA generativa.
+              <CardContent className="pt-2">
+                <p className="text-base">
+                  Estamos explorando como os projetos podem ser usados na IA
+                  generativa.
                 </p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <h3 className="text-xl font-semibold">
-                  Pesquisa de Arquitetura Neural
+                <h3 className="flex items-center gap-2 text-xl font-semibold">
+                  <div className="rounded-full bg-primary p-2">
+                    <CalendarIcon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Eventos
                 </h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-base text-gray-500">
-                  Nossa pesquisa inclui a descoberta de arquiteturas de redes
-                  neurais ótimas para tarefas generativas.
+              <CardContent className="pt-2">
+                <p className="text-base">
+                  Nossa pesquisa inclui a descoberta de eventos ótimos para
+                  tarefas generativas.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <h3 className="flex items-center gap-2 text-xl font-semibold">
+                  <div className="rounded-full bg-primary p-2">
+                    <CopyrightIcon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  Produção de conteúdo
+                </h3>
+              </CardHeader>
+              <CardContent className="pt-2">
+                <p className="text-base">
+                  Nosso grupo está focado na produção de conteúdo para várias
+                  aplicações.
                 </p>
               </CardContent>
             </Card>
@@ -112,28 +147,28 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <Image
                 alt="Imagem Sobre 1"
-                height="200"
-                src="/placeholder.svg"
+                height="300"
+                src="/about-us-pic-1.jpeg"
                 style={{
-                  aspectRatio: "200/200",
+                  aspectRatio: "300/300",
                   objectFit: "cover",
                 }}
-                width="200"
+                width="300"
               />
               <Image
                 alt="Imagem Sobre 2"
-                height="200"
-                src="/placeholder.svg"
+                height="300"
+                src="/about-us-pic-2.jpeg"
                 style={{
-                  aspectRatio: "200/200",
+                  aspectRatio: "300/300",
                   objectFit: "cover",
                 }}
-                width="200"
+                width="300"
               />
             </div>
           </div>
         </section>
-        <section className="mb-10">
+        {/* <section className="mb-10">
           <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Nossa Equipe
           </h2>
@@ -141,38 +176,38 @@ export default function Home() {
             <Avatar>
               <AvatarImage
                 alt="Membro da equipe 1"
-                src="/placeholder.svg?height=200&width=200"
+                src="/placeholder.svg?height=300&width=300"
               />
               <AvatarFallback>MT1</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage
                 alt="Membro da equipe 2"
-                src="/placeholder.svg?height=200&width=200"
+                src="/placeholder.svg?height=300&width=300"
               />
               <AvatarFallback>MT2</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage
                 alt="Membro da equipe 3"
-                src="/placeholder.svg?height=200&width=200"
+                src="/placeholder.svg?height=300&width=300"
               />
               <AvatarFallback>MT3</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage
                 alt="Membro da equipe 4"
-                src="/placeholder.svg?height=200&width=200"
+                src="/placeholder.svg?height=300&width=300"
               />
               <AvatarFallback>MT4</AvatarFallback>
             </Avatar>
           </div>
-        </section>
+        </section> */}
         <section>
           <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Entre em Contato
           </h2>
-          <p className="mb-4 text-lg text-gray-600">
+          <p className="mb-4 text-lg">
             Interessado em nossa pesquisa? Entre em contato conosco.
           </p>
           <Button className="w-full sm:w-auto">Contate-nos</Button>
