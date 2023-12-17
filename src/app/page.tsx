@@ -2,19 +2,19 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/Hfus9B9uNcM
  */
-import { Button } from '@/components/ui/button';
-import { CardHeader, CardContent, Card } from '@/components/ui/card';
-import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
-import Image from 'next/image';
+import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Component() {
   return (
     <main className="w-full">
-      <section className="relative bg-[#ffffff] w-full">
-        <nav className="container mx-auto px-4 md:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
+      <section className="relative w-full bg-[#ffffff]">
+        <nav className="container mx-auto px-4 py-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold tracking-tighter">GERAIA</h1>
-            <div className="hidden lg:flex space-x-4">
+            <div className="hidden space-x-4 lg:flex">
               <Button className="text-base text-black" variant="link">
                 Início
               </Button>
@@ -33,11 +33,11 @@ export default function Component() {
             </div>
           </div>
         </nav>
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 lg:py-32">
-          <h1 className="text-4xl font-bold tracking-tighter text-center mb-10">
+        <div className="container mx-auto px-4 py-12 md:px-6 md:py-24 lg:px-8 lg:py-32">
+          <h1 className="mb-10 text-center text-4xl font-bold tracking-tighter">
             Bem-vindo ao Grupo de Pesquisa GERAIA
           </h1>
-          <p className="text-lg text-gray-600 text-center mb-10">
+          <p className="mb-10 text-center text-lg text-gray-600">
             Dedicado ao avanço da pesquisa em IA Generativa
           </p>
           <div className="flex justify-center">
@@ -48,12 +48,12 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
         <section className="mb-10">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Áreas de Pesquisa
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
                 <h3 className="text-xl font-semibold">Modelos Generativos</h3>
@@ -94,12 +94,12 @@ export default function Component() {
           </div>
         </section>
         <section className="mb-10">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Sobre Nós
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="mb-4 text-lg text-gray-600">
                 Somos um grupo de pesquisadores e engenheiros dedicados ao
                 avanço do campo da IA Generativa. Nossa paixão por IA nos levou
                 a explorar vários aspectos de modelos generativos, aprendizado
@@ -115,8 +115,8 @@ export default function Component() {
                 height="200"
                 src="/placeholder.svg"
                 style={{
-                  aspectRatio: '200/200',
-                  objectFit: 'cover',
+                  aspectRatio: "200/200",
+                  objectFit: "cover",
                 }}
                 width="200"
               />
@@ -125,8 +125,8 @@ export default function Component() {
                 height="200"
                 src="/placeholder.svg"
                 style={{
-                  aspectRatio: '200/200',
-                  objectFit: 'cover',
+                  aspectRatio: "200/200",
+                  objectFit: "cover",
                 }}
                 width="200"
               />
@@ -134,7 +134,7 @@ export default function Component() {
           </div>
         </section>
         <section className="mb-10">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Nossa Equipe
           </h2>
           <div className="flex items-center space-x-4">
@@ -169,10 +169,10 @@ export default function Component() {
           </div>
         </section>
         <section>
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter">
             Entre em Contato
           </h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="mb-4 text-lg text-gray-600">
             Interessado em nossa pesquisa? Entre em contato conosco.
           </p>
           <Button className="w-full sm:w-auto">Contate-nos</Button>
