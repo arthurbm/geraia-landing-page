@@ -48,7 +48,7 @@ export default function Component() {
       </section>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         <section className="mb-10">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">Nossas Áreas de Pesquisa</h2>
+          <h2 className="text-3xl font-bold tracking-tighter mb-4">Áreas de Pesquisa</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
