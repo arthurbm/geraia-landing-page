@@ -17,11 +17,12 @@ import {
 export default function Home() {
   return (
     <main className="w-full">
-      <nav className="fixed top-0 z-10 mx-auto w-full px-4 py-4 md:px-6 lg:px-8">
+      <nav className="fixed top-0 z-10 mx-auto w-full bg-background px-4 py-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold tracking-tighter">GERAIA</h1>
+          {/* <h1 className="text-2xl font-bold tracking-tighter">GERAIA</h1> */}
+          <Image src={"/geraia.svg"} alt="Logo GERAIA" height="60" width="60" />
           <div className="hidden space-x-4 lg:flex">
-            <Button className="text-base text-current" variant="link">
+            {/* <Button className="text-base text-current" variant="link">
               Início
             </Button>
             <Button className="text-base text-current" variant="link">
@@ -35,25 +36,33 @@ export default function Home() {
             </Button>
             <Button className="text-base text-current" variant="link">
               Contato
-            </Button>
+            </Button> */}
             <ThemeToggle />
           </div>
         </div>
       </nav>
       <section className="relative h-screen w-full">
         <div className="container mx-auto flex h-full flex-col justify-center px-4 py-12 md:px-6 md:py-24 lg:px-8 lg:py-32">
-          <h1 className="mb-10 text-center text-6xl font-bold tracking-tighter">
-            GERAIA
-          </h1>
-          <p className="mb-10 text-center text-lg text-gray-600">
-            Pesquisa e desenvolvimento em IA Generativa
+          <div className="mb-10 flex items-center justify-center space-x-6">
+            <Image
+              src={"/geraia.svg"}
+              alt="Logo GERAIA"
+              height="80"
+              width="80"
+            />
+            <h1 className="text-center text-8xl font-bold tracking-tighter">
+              GERAIA
+            </h1>
+          </div>
+          <p className="mb-10 text-center text-xl text-primary">
+            Grupo de pesquisa e aplicações de IA generativa
           </p>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <Button className="mr-4" variant="link">
               Saiba Mais
             </Button>
             <Button>Junte-se a nós</Button>
-          </div>
+          </div> */}
         </div>
       </section>
       <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
@@ -134,15 +143,15 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
             <div>
-              <p className="mb-4 text-lg text-gray-600">
+              <p className="mb-4 text-lg">
                 Somos um grupo de pesquisadores e engenheiros dedicados ao
                 avanço do campo da IA Generativa. Nossa paixão por IA nos levou
                 a explorar vários aspectos de modelos generativos, aprendizado
                 por reforço e pesquisa de arquitetura neural.
               </p>
-              <Button className="mt-4" variant="link">
+              {/* <Button className="mt-4" variant="link">
                 Saiba Mais
-              </Button>
+              </Button> */}
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Image
@@ -152,6 +161,7 @@ export default function Home() {
                 style={{
                   aspectRatio: "300/300",
                   objectFit: "cover",
+                  borderRadius: "0.5rem",
                 }}
                 width="300"
               />
@@ -162,6 +172,7 @@ export default function Home() {
                 style={{
                   aspectRatio: "300/300",
                   objectFit: "cover",
+                  borderRadius: "0.5rem",
                 }}
                 width="300"
               />
